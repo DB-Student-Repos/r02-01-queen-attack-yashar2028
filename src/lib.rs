@@ -1,8 +1,11 @@
 #[derive(Debug)]
-pub struct ChessPosition;
+pub struct ChessPosition{
+    rank:i32
+    file:i32
+}
 
 #[derive(Debug)]
-pub struct Queen;
+pub struct Queen(ChessPosition);
 
 impl ChessPosition {
     pub fn new(rank: i32, file: i32) -> Option<Self> {
